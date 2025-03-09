@@ -11,7 +11,7 @@ class LocalizationService extends ChangeNotifier {
 
   Future<void> loadTranslations() async {
     final jsonString = await rootBundle.loadString(
-      'assets/locales/${_locale.languageCode}.json',
+      'assets/locale/${_locale.languageCode}.json',
     );
     _translations = jsonDecode(jsonString);
     notifyListeners(); // Notify listeners to rebuild
